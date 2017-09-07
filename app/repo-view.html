@@ -1,0 +1,64 @@
+<div ng-cloak >
+    <md-content class="md-padding" flex-gt-xs="100" layout-xs="column" layout="row">
+        <div flex-xs layout="column" flex-gt-xs="100">
+            <md-card md-theme="{{ 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{userFactory.user.name}}</span>
+                        <br>
+                        <p>{{userFactory.repo.name}}</p>
+                        <br>
+                        <p ng-if="userFactory.repo.description">{{userFactory.repo.description}}</p>
+                    </md-card-title-text>
+                </md-card-title>
+
+                <div ng-cloak>
+                    <md-content>
+                        <md-tabs md-dynamic-height md-border-bottom>
+                            <md-tab label="Branches">
+                                <md-content class="md-padding">
+
+                                    <div  flex>
+                                        <md-content>
+                                            <md-list flex>
+                                                <md-list-item class="md-3-line" ng-repeat="branch in branchesData" ng-click="null">
+                                                    <div class="md-list-item-text" layout="column">
+                                                        <p>{{ branch.name }}</p>
+                                                    </div>
+                                                    <md-divider ></md-divider>
+                                                </md-list-item>
+
+                                            </md-list>
+                                        </md-content>
+                                    </div>
+
+                                </md-content>
+                            </md-tab>
+                            <md-tab label="Commits">
+                                <md-content class="md-padding">
+
+                                    <div  flex>
+                                        <md-content>
+                                            <md-list flex>
+                                                <md-list-item class="md-3-line" ng-repeat="commit in commitsData" ng-click="null">
+                                                    <div class="md-list-item-text" layout="column">
+                                                        <p>{{ commit.commit.message }}</p>
+                                                        <p>{{ commit.commit.author.date | date:'yyyy-MM-dd HH:mm'}}</p>
+                                                    </div>
+                                                    <md-divider ></md-divider>
+                                                </md-list-item>
+
+                                            </md-list>
+                                        </md-content>
+                                    </div>
+
+                                </md-content>
+                            </md-tab>
+                        </md-tabs>
+                    </md-content>
+                </div>
+
+            </md-card>
+        </div>
+    </md-content>
+</div>

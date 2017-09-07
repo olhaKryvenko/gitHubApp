@@ -1,0 +1,150 @@
+/* app css stylesheet */
+*{
+    margin:0;
+    padding:0;
+}
+
+html,
+body {
+    width: 100%;
+    background-color: rgb(250,250,250);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.54);
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.material-icons {
+  line-height: inherit;
+}
+
+header{
+  height: 50px;
+  background: #22252d;
+  color: #fff;
+
+}
+
+#wrapper {
+  overflow: hidden;
+    min-height: 100%;
+    position: relative;
+}
+
+.container{
+    max-width:970px;
+    margin:0 auto 60px;
+}
+
+footer {
+  background: #22252d;
+  color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+}
+
+.md-toolbar-tools {
+  background-color: #FF9800;
+}
+
+#btn-top {
+  background-color: #FF9800;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}
+
+.toolbardemoScrollShrink .face {
+  width: 48px;
+  margin: 16px;
+  border-radius: 48px;
+  border: 1px solid #ddd;
+}
+
+.carddemoBasicUsage .card-media {
+  background-color: #999999;
+}
+
+.md-media-xl.card-media img{
+  display: block;
+  max-width: 100%;
+}
+
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+.tabsdemoDynamicHeight md-content md-tabs {
+  background: #f6f6f6;
+  border: 1px solid #e1e1e1; }
+.tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+  background: white; }
+.tabsdemoDynamicHeight md-content h1:first-child {
+  margin-top: 0; }
+
+.listdemoBasicUsage md-divider {
+  margin-top: 10px;
+  margin-bottom: 0; }
+
+md-tabs.md-default-theme md-ink-bar,
+md-tabs md-ink-bar {
+    color: inherit;
+    background: #FF9800;
+}
+
+md-tabs.md-default-theme .md-tab.md-active,
+md-tabs .md-tab.md-active {
+  color: #FF9800;
+}
+
+.class-view {
+  position: relative;
+}
+
+/* page animations*/
+
+.class-view.ng-leave        {
+  z-index:9999;
+  -webkit-animation:slideOutLeft 0.5s both ease-in;
+  -moz-animation:slideOutLeft 0.5s both ease-in;
+  animation:slideOutLeft 0.5s both ease-in;
+}
+.class-view.ng-enter 		{
+  z-index:8888;
+  -webkit-animation:slideInRight 0.5s both ease-in;
+  -moz-animation:slideInRight 0.5s both ease-in;
+  animation:slideInRight 0.5s both ease-in;
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+  from 	{ transform:translateX(100%); }
+  to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+  from 	{ -moz-transform:translateX(100%); }
+  to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+  from 	{ -webkit-transform:translateX(100%); }
+  to 		{ -webkit-transform: translateX(0); }
+}
+
+/* slide out left */
+@keyframes slideOutLeft {
+  to 		{ transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {
+  to 		{ -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+  to 		{ -webkit-transform: translateX(-100%); }
+}
