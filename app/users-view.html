@@ -13,9 +13,8 @@
 
             <md-list>
 
-                <md-list-item class="md-3-line" ng-click="setUser(user)" ng-href = "#user" ng-repeat="user in usersData">
+                <md-list-item class="md-3-line" ng-click="setUser(user)" ng-href="#user" ng-repeat="user in usersData">
                     <img ng-src="{{user.avatar_url}}" alt="{{user.login}}" class="md-avatar">
-
                     <div class="md-list-item-text">
                         <h3>{{user.login}}</h3>
                         <p>{{user.email}}</p>

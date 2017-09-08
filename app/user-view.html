@@ -1,41 +1,36 @@
+<md-content class="md-padding">
 
-    <md-content class="md-padding">
-
-            <md-card>
+    <md-card>
+        <md-card-title>
+            <div class="md-media-xl card-media">
+                <img ng-src="{{userFactory.user.avatar_url}}" alt="{{userFactory.user.login}}">
+            </div>
+            <md-card-content>
+                <md-card-title-text>
+                    <span class="md-headline">{{userFactory.user.login}}</span>
+                    <span class="md-list-item-text">{{userFactory.user.name}}</span>
+                    <span class="md-subhead">{{userFactory.user.email}}</span>
+                </md-card-title-text>
+            </md-card-content>
+        </md-card-title>
+    </md-card>
+    <br>
+    <md-card>
+        <md-toolbar class="md-warn">
+            <div class="md-toolbar-tools">
+                <h2 class="md-flex" class="md-padding">List of Repositories</h2>
+            </div>
+        </md-toolbar>
+        <div layout="row" layout-wrap class="md-padding" layout-align="center">
+            <md-card flex="30" ng-repeat="repo in reposData">
                 <md-card-title>
-                    <div class="md-media-xl card-media">
-                        <img ng-src="{{userFactory.user.avatar_url}}" alt="{{userFactory.user.login}}">
-                    </div>
-                    <md-card-content>
-                        <md-card-title-text>
-                            <span class="md-headline">{{userFactory.user.login}}</span>
-                            <span class="md-list-item-text">{{userFactory.user.name}}</span>
-                            <span class="md-subhead">{{userFactory.user.email}}</span>
-                        </md-card-title-text>
-                    </md-card-content>
+                    <md-card-title-text class="md-list-item-text">
+                        <a ng-href="#repo" ng-click="setRepo(repo)" class="md-list-item-text">{{repo.name}}</a>
+                        <p class="md-subhead">{{repo.language}}</p>
+                    </md-card-title-text>
                 </md-card-title>
             </md-card>
-            <br>
-            <md-card>
+        </div>
+    </md-card>
 
-                <md-toolbar class="md-warn">
-                    <div class="md-toolbar-tools">
-                        <h2 class="md-flex" class="md-padding">List of Repositories</h2>
-                    </div>
-                </md-toolbar>
-
-
-                <div layout="row" class="cards-list" layout-wrap class="md-padding" layout-align="center">
-                    <md-card flex="30" ng-repeat="repo in reposData">
-                        <md-card-title>
-                            <md-card-title-text class="md-list-item-text">
-                                <a  ng-href = "#repo" ng-click="setRepo(repo)" class="md-list-item-text">{{repo.name}}</a>
-                                <p class="md-subhead">{{repo.language}}</p>
-                            </md-card-title-text>
-                        </md-card-title>
-                    </md-card>
-                </div>
-            </md-card>
-
-    </md-content>
-</div>
+</md-content>
